@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Renan Pinto</title>
+    <meta charset="utf-8" />
+
+    <!-- Enabling responsive features -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified Bootstrap JavaScript CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- My style -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <!-- My Skill style -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawStuff);
+
+        function drawStuff() {
+            var data = new google.visualization.arrayToDataTable([
+              ['', 'Porcentagem'],
+              ['C#', 80],
+              ['Asp.Net MVC', 70],
+		      ['Asp.Net Web API', 60],
+		      ['DDD', 60],
+		      ['TDD', 60],		      
+              ['GIT', 60],
+              ['SQL', 50],
+		      ['Entity Framework', 30],
+              ['AngularJS/Angular', 30],
+		      ['.Net Core', 20],
+              ['HTML5', 20],
+		      ['JS/JQuery', 20],
+		      ['Css/Bootstrap', 20],
+		      ['Docker', 20],
+		      ['Azure', 20]		      
+            ]);
+
+            var options = {
+                title: 'Skills',
+                width: 250,
+                legend: { position: 'none' },
+                colors: ['#1c3b4f'],
+                bars: 'horizontal', // Required for Material Bar Charts.
+                axes: {
+                    x: {
+                        0: { side: 'top', label: 'Porcentagem' } // Top x-axis.
+                    }
+                },
+                bar: { groupWidth: "90%" }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+            chart.draw(data, options);
+        };
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <header class="col-lg-12 text-center">
+            <h2>RENAN PINTO</h2>
+        </header>
+
+        <aside class="col-lg-3">
+		
+            <h4>PERFIL</h4>
+			<img src="EU.png" style="width:100px; height:100px">
+            <div>
+                Desenvolvedor talentoso com 7 anos de experiência em projetos .Net usando metodologias ágeis. Meus pontos fortes são conhecimento em C#, Asp.Net MVC e web API's usando Asp.Net Web API.
+                Gosto de trabalhar em equipe e estou sempre estudando e aprendendo novas tecnologias.
+            </div>
+            <h4>EDUCAÇÃO</h4>
+            <p>
+                <strong><span class="glyphicon glyphicon-education" aria-hidden="true"></span> PUC-MG</strong><br />
+                Pós-Graduação em Engenharia de Software, 2007-2008
+            </p>
+            <p>
+                <strong><span class="glyphicon glyphicon-education" aria-hidden="true"></span> IBHES</strong><br />
+                Bacharel em Administração com enfase em Sistemas de Informação, 2004-2007
+            </p>
+            <p>
+                <strong>Certificação Microsoft</strong><br />
+                70-480 Programming in HTML5 with JavaScript and CSS3                
+            </p>
+            <img src="mcp.jpg">
+            
+            <h4>CONTATO</h4>
+            <p>
+                <span class="glyphicon glyphicon-phone"></span>  (31) 98557-9082
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:renancosme@gmail.com">renancosme@gmail.com</a>
+            </p>
+            <p>
+                <strong><span class="glyphicon glyphicon-globe"></span> Web</strong>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/renancosme/" target="_blank" title="See my profile at LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://pt.stackoverflow.com/users/285/renan" target="_blank" title="See my profile at StackOverflow">StackOverflow</a></li>
+                    <li><a href="http://ehbomcompartilhar.blogspot.com" target="_blank" title="See here my blog">Blog</a></li>
+                    <li><a href="https://github.com/renancosme/" target="_blank" title="See my profile at GitHub">GitHub</a></li>
+                </ul>
+            </p>
+
+            <h4>CONHECIMENTO</h4>
+            <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+			
+			<h4>Change language / Mudar idioma</h4>
+			<a href="index.html">
+				<img src="EUA.png" alt="Versão em Inglês" title="Versão em Inglês"/>
+			</a>
+			<a href="index-pt.html">
+				<img src="Brazil.png" alt="Versão em Português" title="Versão em Português"/>
+			</a>
+        </aside>
+
+        <section class="col-lg-9">
+
+            <h4>EXPERIÊNCIA</h4>
+
+            <strong>BHS | Março 2017 - Presente</strong>            
+            <p>Desenvolvimento de serviços REST usando .Net Core, Entity Framework/Dapper, Docker, Integração Contínua e Asp.Net Web API.</p>
+            <p>Projetos:</p>
+            <ul>                
+                <li>
+                    OlaWeb: Projeto para gerenciamento de empréstimos do bando Olé Consignado.
+                    <ul>
+                        <li>
+                            Desenvolvimento de web API's que dão suporte a uma variedade de clientes incluindo aplicações acessadas via desktop, browsers e celulares.                             
+                        </li>
+                    </ul>                    
+                </li>
+            </ul>
+
+            <strong>AeC | Fevereiro 2016 - Março 2017</strong>
+            <p>Desenvolvi sistemas usando Asp.Net Net MVC, Entity Framework, DDD, Unit Tests e Asp.Net WebAPI.</p>
+            <p>Projetos:</p>
+            <ul>
+                <li>Hominum: Sistema para gerenciamento de hierarquias na organização.
+                    <ul>
+                        <li>
+                            Responsável por investigar e solucionar problemas de performance em consultas bem como auxílio na implementação de novas funcionalidades.
+                        </li>
+                    </ul>
+                </li>
+                <li>Portal de Aprovação: Projeto para gerenciamento de aprovações de aquisições de bens e serviços da empresa.
+                    <ul>
+                        <li>
+                            Construí um layout responsivo com Bootstrap, permitindo uma melhor experiência do usuário em dispositivos móveis.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Automação: Projeto para gerenciamento de infr=ormações sobre execução de robôs.
+                    <ul>
+                        <li>
+                            Responsável pelo apoio à equipe de arquitetura de sistemas na criação do sistema bem como realização de provas de conceito de tecnologias para aplicação no projeto (Nancy, RiotJS, TopShelf e Redis database).
+                        </li>
+                    </ul>
+                </li>
+            </ul>            
+
+            <strong>HBA Tecnologia | Dezembro 2015 - Fevereiro 2016</strong>
+            <p>Desenvolvi a arquitetura do sistema usando Asp.Net MVC, DDD, TDD e AngularJS.</p>
+            <p>Projetos:</p>
+            <ul>
+                <li>
+                    HBA Tools: Sistema para gerenciamento de eventos, como feiras e congressos.
+                    <ul>
+                        <li>
+                            Foi um desafio aceito, uma vez que sem experiência em AngularJS, fui convidado para criação de uma arquitetura de sistemas usando essa tecnologia.                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <strong>Axxiom | Maio 2014 - Agosto 2015</strong>
+            <p>
+                Desenvolvi e realizei manutenção do sistema GIS usando linguagem Magik e plataforma Electric Office - GE.
+            </p>
+            <p>Projetos:</p>
+            <ul>
+                <li>
+                    Atlantis: Projeto para modernizar e unificar o sistema GIS do sistema de distribuição da CEMIG e LIGHT adotando a solução GE Energy Smallworld Electric Office (EO) para registro de ativos e projeto.
+                    <ul>
+                        <li>
+                            Desenvolvi scripts para criar e atualizar objetos no banco de dados usando.
+                        </li>
+                        <li>
+                            Implementei fluxos de migração de dados usando FME tool.
+                        </li>
+                        <li>
+                            Implementei novas regras de negócio.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <strong>AeC | Janeiro 2013 - Abril 2014</strong>
+            <p>Desenvolvi a aquitetura de sistemas e realizei manutenção usando Asp.Net MVC, WCF e MSMQ, DDD, TDD e SQL Server.</p>
+            <p>Projetos:</p>
+            <ul>
+                <li>
+                    Qualitas: Projeto para o gerenciamento de auditoria de processos internos da AeC.
+                    <ul>
+                        <li>
+                            Criei a arquitetura do sistema baseada em Domain Driven Design (DDD): extensível, escalável, confiável, seguro, fácio de manter e usar, flexível e de acordo com os requisitos. 
+                        </li>
+                        <li>
+                            Propus e implementei o uso de testes de unidade para garantir a qualidade do produto.
+                        </li>
+						<li>
+							Propus e implementei a utilização do framework Castle Windsor para automatizar o registro e resolução das dependências pelos desenvolvedores.
+						</li>
+                    </ul>                    
+                </li>
+                <li>
+                    Caridah: Projeto para processar, armazenar e gerenciar doações para o Instituto Mario Penna.
+                    <ul>
+                        <li>
+                            Criei a arquitetura do sistema baseada em DDD e TDD.
+                        </li>
+                        <li>
+                            Propus e implementei o cadastro de layout de arquivos, permitindo ao cliente maior flexibilidade na importação de arquivos de mailing com layouts diferentes.
+                        </li>
+                        <li>
+                            Desenvolvi uma camada especcífica para importação assíncrona de arquivos de mailing usando WCF e MSMQ para enfileiramento de arquivos.
+                            Foi um grande desafio, pois, ainda não havia utilizado WCF com protocolo MSMQ.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <strong>GSM Sistemas | Julho 2012 - Dezembro 2012 </strong>
+            <p>Apoio na criação da arquitetura do sistema usando Asp.Net MVC, DDD, TDD, CQRS, Injeção de Dependência com Castle Windsor, NHibernate e SQL Server.</p>
+            <p>Projetos:</p>
+            <ul>
+                <li>
+                    ePrime: Sistema de gerenciamento de planos de saúde.
+                    <ul>
+                        <li>
+                            Responsável pela criação da arquitetura do projeto junto a equipe de desenvolvedores e a um consultor externo.
+                        </li>
+                    </ul>                    
+                </li>
+            </ul>
+
+            <strong>Prime Systems | Junho 2010 - Julho 2012</strong>
+            <p>Desenvolvi, realizei a manutenção de sistemas e construí relatórios usando as tecnologias estabelecidas pelo time de arquitetura de sistemas, usando Asp.net MVC, WebServices, DDD, TDD, Injeção de Dependência com Microsoft Unity, Reporting Services e SQL Server.</p>
+            <p>Projetos:</p>
+            <ul>
+                <li>
+                    OSMobile: Projeto para monitoramento e execução de ordens de serviço, automatização de processos e gerenciamento de produtividade de equipes de campo.
+                    <ul>
+                        <li>
+                            Esse era o principal projeto da empresa. Tive a oportunidade de desenvolver minhas habilidades técnicas e realizei viagens ao pricipal cliente da empresa para realização de suporte e atualizações no sistema quando necessário.
+                        </li>
+                    </ul>                    
+                </li>
+                <li>
+                    HPLogistic: Projeto para auxiliar o processo de acompanhamento, coleta de amostras e controle de qualidade do laboratório Hermes Pardini.
+                    <ul>
+                        <li>
+                            Foi um projeto incrível, pois nossa equipe realmente aplicamos Scrum integralmente em nosso processo de desenvolvimento, além disso tive meu primeiro contato com ótimos padrões de design como DDD, TDD, Injeção de Dependência e MVC.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
